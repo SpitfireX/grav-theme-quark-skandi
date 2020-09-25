@@ -54,8 +54,9 @@
                         {% endblock %}
                         </nav>
 
-                        {% include 'partials/langswitcher-combobox.html.twig' %}
-
+                        <section id="#navbar-langswitcher">
+                            {% include 'partials/langswitcher-combobox.html.twig' %}
+                        </section>
                         {% if config.plugins.login.enabled and grav.user.username %}
                             <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
                         {% endif %}
@@ -100,12 +101,15 @@
             <div class="mobile-logo">
                 {% include 'partials/logo.html.twig' with {mobile: true} %}
             </div>
-            <nav class="overlay-menu">
-                {% include 'partials/navigation.html.twig' with {tree: true} %}
-            </nav>
-            <section>
-                {% include 'partials/langswitcher-combobox.html.twig' %}
-            </section>
+            <div class="overlay-menu">
+                <nav>
+                    {% include 'partials/navigation.html.twig' with {tree: true} %}
+
+                </nav>
+                <section id="#drawer-langswitcher">
+                    {% include 'partials/langswitcher-combobox.html.twig' %}
+                </section>
+            </div>
         </div>
     </div>
     {% endblock %}
