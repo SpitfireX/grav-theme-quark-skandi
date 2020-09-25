@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+{{ content }}
+
+
+    {% for faq in page.header.faq %}
+        {% set counter = ( counter | default(0) ) + 1 %}
+        <div class="accordion">
+            <input type="checkbox" id="faqordion-{{ counter }}" name="faqordion-checkbox-{{ counter }}" hidden>
+            <label class="accordion-header" for="faqordion-{{ counter }}">
+                <h4>
+                    <i class="icon icon-arrow-right mr-1"></i>
+                    {{ faq.question }}
+                </h4>
+            </label>
+            <div class="accordion-body">
+                {{ faq.answer|markdown }}
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

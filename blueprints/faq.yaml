@@ -1,0 +1,25 @@
+title: FAQ
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        faq:
+          type: tab
+          title: FAQ
+          fields:
+            header.faq:
+              name: faq
+              type: list
+              label: Frequently Asked Questions
+
+              fields:
+                .question:
+                  type: text
+                  label: Question
+                .answer:
+                  type: markdown
+                  label: Answer
