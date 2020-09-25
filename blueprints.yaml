@@ -1,17 +1,17 @@
-name: Quark
-slug: quark
+name: Quark Skandi
+slug: quark-skandi
 type: theme
 version: 2.0.3
-description: New Grav Default Theme
-icon:  microchip
+description: 
+icon:  heart
 author:
-  name: Team Grav
-  email: devs@getgrav.org
-  url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-theme-quark
-demo: https://demo.getgrav.org/onepage-skeleton
+  name: Timm Weber
+  email: timm.weber@me.com
+  url: https://github.com/SpitfireX
+homepage: https://github.com/SpitfireX/grav-theme-quark-skandi
+demo: 
 keywords: quark, spectre, theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/getgrav/grav-theme-quark/issues
+bugs: https://github.com/SpitfireX/grav-theme-quark-skandi/issues
 license: MIT
 
 dependencies:
