@@ -56,4 +56,16 @@ jQuery(document).ready(function($){
     // Tree Menu
     $(".tree").treemenu({delay:300});
 
+
+    // Combo Box Language Switcher
+    $(function(){
+        // bind change event to select
+        $('.langswitcher-combo').on('change', function () {
+            var url = $(this).val(); // get selected value
+            if (url) { // require a URL
+                window.location = url; // redirect
+            }
+            return false;
+        });
+      });
 });
