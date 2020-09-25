@@ -10,3 +10,43 @@
     flex-grow: 0;
     flex-shrink: 0;
 }
+
+.flag {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    min-width: 1.25em;
+    min-height: 1.25em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    vertical-align: baseline;
+  }
+
+  .de {
+    background-image: url("images/flags/de.svg");
+  }
+
+  .dk {
+    background-image: url("images/flags/dk.svg");
+  }
+
+  .gb {
+    background-image: url("images/flags/gb.svg");
+  }
+
+  .is {
+    background-image: url("images/flags/is.svg");
+  }
+
+  .no {
+    background-image: url("images/flags/no.svg");
+  }
+
+  .se {
+    background-image: url("images/flags/se.svg");
+  }
+
+  .space {
+    margin-right: 0.5em;
+  }

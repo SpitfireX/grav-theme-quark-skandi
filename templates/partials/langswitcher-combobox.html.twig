@@ -25,7 +25,7 @@
     {% endif %}
 
     {% if show_language %}
-        <option value="{{ lang_url ~ uri.params }}"{{ active_select }}>{{ native_name(language)|capitalize }}</option>
+        <option value="{{ lang_url ~ uri.params }}"{{ active_select }}><span class="{{ language }} flag space"></span> {{ native_name(language)|capitalize }}</option>
     {% endif %}
 
 {% endfor %}
