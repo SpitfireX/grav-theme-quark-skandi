@@ -1,3 +1,5 @@
+$navbar-hover-bg: $gray-color-dark;
+
 .dropmenu {
 
   @include breakpoint(md) {
@@ -8,10 +10,19 @@
     white-space: nowrap;
     margin: 0;
     display: flex;
+    width: inherit;
+    min-width: inherit;
+
+    li.nav-submenu {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
 
     li {
       position: relative;
       margin: 0;
+      min-width: inherit;
+      border-radius: $default-radius;
 
       a {
         text-decoration: none;
@@ -42,6 +53,8 @@
       }
 
       &:hover {
+        background-color: $navbar-hover-bg;
+
         & > ul {
           display: block;
           visibility: visible;
@@ -57,9 +70,14 @@
       position: absolute;
       top: 100%;
       list-style: none;
-      background: $dropmenu-bg;
+      background: $navbar-hover-bg;
       box-shadow: $dropmenu-shadow;
       visibility: hidden;
+      text-align: left;
+      border: $border-color solid 1px;
+      border-top: none;
+      border-bottom-left-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
 
       ul {
         position: absolute;
@@ -77,7 +95,7 @@
   // Animation options
   &.animated {
     ul li {
-      transition: background .7s, color 0.5s;
+      transition: background .25s, color 0.25s;
     }
 
     ul li:hover > ul {
@@ -86,7 +104,7 @@
     }
 
     ul ul {
-      transition: transform .3s, opacity .5s;
+      transition: transform .25s, opacity .25s;
       opacity: 0;
       transform: translateY(-10px);
     }

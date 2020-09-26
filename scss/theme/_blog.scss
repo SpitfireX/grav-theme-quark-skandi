@@ -1,3 +1,8 @@
+// Make item columns full width
+#item {
+  width: 100%;
+}
+
 /** Extra columns spacing **/
 .extra-spacing:not(.col-12), :not(.col12) > .e-content {
   padding-right: 1rem;
@@ -36,16 +41,23 @@
   }
 }
 
+/** Listing Container **/
+
+
 /** Blog Listing **/
 .blog-listing {
 
   .bricklayer-column {
-    padding-left: 0px;
+    padding: 0px;
     // padding-right: 25px;
-
   }
+
+  .bricklayer-column:nth-child(3) {
+    padding-left: 0.8rem;
+  }
+
   .card {
-    margin-bottom: 25px;
+    margin-bottom: 0.8rem;
     border: 0;
     box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
     background-color: $bg-color;

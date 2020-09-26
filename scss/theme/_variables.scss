@@ -13,8 +13,8 @@ $dark-color: $text-color-inv !default;
 $light-color: $text-color !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
-$border-color: lighten($body-color, 6.67%) !default;
-$bg-color: lighten($body-color, 6.67%) !default;
+$border-color: lighten($body-color, 8%) !default;
+$bg-color: lighten($body-color, 8%) !default;
 $body-font-color: darken($light-color, 5%) !default;
 
 // Layout

@@ -121,6 +121,8 @@
 .overlay-menu {
   height: calc(100% - 90px);
   overflow-y: scroll;
+  padding-bottom: 1rem;
+  border-bottom: $border-color solid 1px;
 
   & > .tree {
     text-align: left;
@@ -143,12 +145,18 @@
     background: rgba($gray-color-dark,0.1);
 
     a {
+      color: $text-color;
       display: block;
       margin-left: 1.2rem;
       font-size: 1rem;
 
-      &:hover, &:focus, &.active {
+      &:hover, &:focus {
         color: $primary-color-light !important;
+        text-decoration: none;
+      }
+
+      &.active {
+        color: $primary-color !important;
         text-decoration: none;
       }
     }
@@ -165,6 +173,7 @@
     line-height: 1rem;
     padding-left: 5px;
     float: left;
+    visibility: hidden;
 
     &:before {
       display: inline-block; margin-right: 2pt;

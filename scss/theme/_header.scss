@@ -18,22 +18,22 @@
     fill: $header-color-dark;
   }
 
-  .header-dark &:not(.scrolled) {
-    background: $header-color-dark;
-    color: $light-color;
-    a {
-      color: $light-color !important;
-    }
-    a.active {
-      color: $primary-color !important;
-    }
-    .dropmenu ul ul a {
-        color: $dark-color !important;
-    }
-    .logo svg path {
-      fill: $light-color;
-    }
-  }
+  // .header-dark &:not(.scrolled) {
+  //   background: $header-color-dark;
+  //   color: $light-color;
+  //   a {
+  //     color: $light-color !important;
+  //   }
+  //   a.active {
+  //     color: $primary-color !important;
+  //   }
+  //   .dropmenu ul ul a {
+  //       color: $dark-color !important;
+  //   }
+  //   .logo svg path {
+  //     fill: $light-color;
+  //   }
+  // }
 
   .header-dark.header-transparent &:not(.scrolled) {
     background: rgba(#000, 0.05);
