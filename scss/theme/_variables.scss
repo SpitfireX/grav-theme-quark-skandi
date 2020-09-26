@@ -1,12 +1,21 @@
+// Custom Style
+// Colors
+$accent-color: #fad044 !default;
+$text-color: #fff !default;
+$text-color-inv: #000 !default;
+$body-color: #000 !default;
+// Stuff
+$default-radius: 0.5rem !default;
+
 // Spectre Overrides
-$primary-color: #3085EE !default;
-$dark-color: #454d5d !default;
-$light-color: #fff !default;
+$primary-color: $accent-color !default;
+$dark-color: $text-color-inv !default;
+$light-color: $text-color !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
-$border-color: lighten($dark-color, 60%) !default;
-$bg-color: lighten($dark-color, 66%) !default;
-$body-font-color: lighten($dark-color, 5%) !default;
+$border-color: lighten($body-color, 6.67%) !default;
+$bg-color: lighten($body-color, 6.67%) !default;
+$body-font-color: darken($light-color, 5%) !default;
 
 // Layout
 $horiz-padding: 1rem;
@@ -18,9 +27,9 @@ $min-responsive-font-size: 16px;
 // Header
 $header-height-large: 4rem;
 $header-height-small: 2.3rem;
-$header-color-dark: #222;
-$header-text-light: $light-color;
-$header-text-dark: darken($dark-color, 15%);
+$header-color-dark: $body-color;
+$header-text-light: $text-color;
+$header-text-dark: $text-color-inv;
 
 // Dropdown Menu
 $dropmenu-bg: $light-color;

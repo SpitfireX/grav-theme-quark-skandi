@@ -41,13 +41,15 @@
 
   .bricklayer-column {
     padding-left: 0px;
-    padding-right: 25px;
+    // padding-right: 25px;
 
   }
   .card {
     margin-bottom: 25px;
     border: 0;
     box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
+    background-color: $bg-color;
+    border-radius: $default-radius;
   }
 
   .card-footer {
@@ -80,6 +82,13 @@
 /** Pagination **/
 ul.pagination {
   justify-content: center;
+}
+
+ul.pagination li {
+  border: none;
+  background: $bg-color;
+  border-radius: $default-radius;
+  margin: .1rem;
 }
 
 .prev-next {

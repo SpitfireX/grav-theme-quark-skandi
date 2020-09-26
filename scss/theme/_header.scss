@@ -7,11 +7,11 @@
   font-size: 0.7rem;
   font-weight: 700;
 
-  background: $light-color;
-  color: $dark-color;
+  background: $body-color;
+  color: $light-color;
 
   a {
-    color: $dark-color;
+    color: $light-color;
   }
 
   .logo svg path {
@@ -22,10 +22,10 @@
     background: $header-color-dark;
     color: $light-color;
     a {
-      color: rgba($light-color, 0.7) !important;
+      color: $light-color !important;
     }
     a.active {
-      color: $light-color !important;
+      color: $primary-color !important;
     }
     .dropmenu ul ul a {
         color: $dark-color !important;

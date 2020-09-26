@@ -74,7 +74,7 @@
     span {
       background: $mobile-color-main;
       border: none;
-      height: 4px;
+      height: 2px;
       width: 100%;
       position: absolute;
       top: 0;
@@ -105,9 +105,9 @@
   transition: opacity .35s, visibility .35s, height .35s;
 
   &.open {
-    opacity: .95;
+    opacity: 1;
     visibility: visible;
-    height: 100%;
+    height: auto;
 
   }
   nav {
