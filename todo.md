@@ -1,0 +1,6 @@
+- [ ] Desktop Navbar: Border um Nav und Langchooser
+- [x] Mobile Navmenu
+  - [x] Subitems darstellen
+  - [x] Centering überprüfen (komische spans entfernen)
+- [ ] Blog: Toggle für Bricklayer
+- [ ] 
