@@ -47,6 +47,14 @@
 /** Blog Listing **/
 .blog-listing {
 
+  .bricklayer  {
+    margin-bottom: 40px;
+  }
+
+  .blog-posts  {
+    margin-bottom: 40px;
+  }
+
   .bricklayer-column {
     padding: 0px;
     // padding-right: 25px;
@@ -57,11 +65,15 @@
   }
 
   .card {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0rem;
     border: 0;
     box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
     background-color: $bg-color;
     border-radius: $default-radius;
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 0.8rem;
   }
 
   .card-footer {
@@ -92,6 +104,12 @@
 }
 
 /** Pagination **/
+
+.pagination {
+  margin: 0px;
+  padding: 0px;
+}
+
 ul.pagination {
   justify-content: center;
 }

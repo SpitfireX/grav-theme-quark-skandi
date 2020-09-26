@@ -5,6 +5,7 @@
 {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+{% set use_bricklayer = header_var('use_bricklayer', [page, blog])|defined(true) %}
 
 {% block stylesheets %}
     {% do assets.addCss('theme://css/bricklayer.css') %}
@@ -13,7 +14,9 @@
 
 {% block javascripts %}
     {{ parent() }}
-    {% do assets.add('theme://js/bricklayer.min.js') %}
+    {% if use_bricklayer %}
+        {% do assets.add('theme://js/bricklayer.min.js') %}
+    {% endif %}
     {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
 {% endblock %}
 
@@ -33,7 +36,7 @@
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
 
-                <div class="bricklayer">
+                <div class="{{ (use_bricklayer) ? 'bricklayer' : 'blog-posts' }}">
                 {% for child in collection %}
                     {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
                 {% endfor %}
@@ -54,8 +57,10 @@
         </section>
     </section>
     <script>
+    {% if use_bricklayer %}
         //Bricklayer
         var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+    {% endif %}
     </script>
 {% endblock %}
 
