@@ -114,7 +114,7 @@
 
     position: relative;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -163,7 +163,10 @@
   }
 
   ul {
-    margin: 0 0 0 1rem;
+    margin: 1rem 0 0 0;
+    background: $gray-color-dark;
+    border-radius: .5rem;
+    padding: 0px 1rem;
   }
 
   .toggler {
@@ -177,6 +180,7 @@
 
     &:before {
       display: inline-block; margin-right: 2pt;
+      visibility: visible;
     }
   }
 
@@ -184,16 +188,29 @@
     opacity: 0.3; cursor: default;
 
     &:before {
-      content: "\2022";
+      content: '\f105';
+      font-family: 'FontAwesome';
+      width: 1rem;
+      margin-right: 0.25rem;
+      font-size: small;
+      opacity: 0;
     }
   }
 
   li.tree-closed > .toggler:before {
-    content: "+";
+    content: '\f105';
+    font-family: 'FontAwesome';
+    width: 1rem;
+    margin-right: 0.25rem;
+    font-size: small;
   }
 
   li.tree-opened > .toggler:before {
-    content: "\2212";
+    content: '\f107';
+    font-family: 'FontAwesome';
+    width: 1rem;
+    margin-right: 0.25rem;
+    font-size: small;
   }
 }
 
