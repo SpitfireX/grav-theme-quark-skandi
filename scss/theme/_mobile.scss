@@ -9,7 +9,10 @@
 }
 
 .mobile-logo {
+  height: $header-height-large;
+
   svg, img {
+    display: inherit;
     height: 42px;
     margin-top: .7rem;
     margin-left: 1.4rem;
@@ -18,6 +21,14 @@
       fill: $light-color;
     }
 
+  }
+}
+
+.mobile-logo.scrolled {
+  height: $header-height-small;
+  svg, img {
+    height: 28px;
+    margin-top: .4rem;
   }
 }
 
@@ -120,7 +131,7 @@
 
 .overlay-menu {
   height: calc(100% - 90px);
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: 1rem;
   border-bottom: $border-color solid 1px;
 

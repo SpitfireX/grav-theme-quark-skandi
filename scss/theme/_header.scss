@@ -1,7 +1,7 @@
 #header {
   width: 100%;
   height: $header-height-large;
-  border-bottom: 1px solid rgba($gray-color, 0.2);
+  border-bottom: $border-color solid 1px;
   @extend .default-animation;
 
   font-size: 0.7rem;

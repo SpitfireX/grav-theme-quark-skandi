@@ -13,7 +13,7 @@ $dark-color: $text-color-inv !default;
 $light-color: $text-color !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
-$border-color: lighten($body-color, 8%) !default;
+$border-color: lighten($body-color, 12%) !default;
 $bg-color: lighten($body-color, 8%) !default;
 $body-font-color: darken($light-color, 5%) !default;
 
@@ -26,7 +26,7 @@ $min-responsive-font-size: 16px;
 
 // Header
 $header-height-large: 4rem;
-$header-height-small: 2.3rem;
+$header-height-small: 2.5rem;
 $header-color-dark: $body-color;
 $header-text-light: $text-color;
 $header-text-dark: $text-color-inv;
