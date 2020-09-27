@@ -1,6 +1,6 @@
 // Make item columns full width
 #item {
-  width: 100%;
+  // width: 100%;
 }
 
 /** Extra columns spacing **/
@@ -47,12 +47,21 @@
 /** Blog Listing **/
 .blog-listing {
 
+  .container {
+    padding: 0 0 1.6rem !important;
+    .columns {
+        .column {
+          margin-top: 1.6rem;
+        }
+    }
+  }
+
   .bricklayer  {
-    margin-bottom: 40px;
+    margin-bottom: 1.6rem;
   }
 
   .blog-posts  {
-    margin-bottom: 40px;
+    margin-bottom: 1.6rem;
   }
 
   .bricklayer-column {
@@ -127,6 +136,21 @@ ul.pagination li {
 
 /** Sidebar specific tweaks **/
 #sidebar {
+
+  .sidebar-content {
+    background: $bg-color;
+    border-radius: $default-radius;
+    padding: .8rem;
+    margin-bottom: .8rem;
+
+    h1, h2, h3, h4 {
+      margin-top: 0px;
+    }
+  }
+
+  .sidebar-content:last-child {
+    margin-bottom: 0rem;;
+  }
 
   ul.related-pages {
     box-shadow: none;
