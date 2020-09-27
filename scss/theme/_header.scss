@@ -73,6 +73,11 @@
     top: 0;
     z-index: 2;
   }
+
+  // remove padding to align header content with rest of the page
+  .container {
+    padding: 0;
+  }
 }
 
 // Animate Fixed Header
