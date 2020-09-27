@@ -146,6 +146,18 @@ ul.pagination li {
     h1, h2, h3, h4 {
       margin-top: 0px;
     }
+
+    &>p {
+      margin: 0;
+    }
+
+    * {
+      vertical-align: bottom;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   .sidebar-content:last-child {

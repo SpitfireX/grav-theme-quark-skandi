@@ -1,0 +1,22 @@
+title: Sidebar Content Blocks
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        faq:
+          type: tab
+          title: Sidebar Content Blocks
+          fields:
+            header.sidebar_content_blocks:
+              name: sidebar_content_blocks
+              type: list
+              label: Sidebar Content Blocks
+
+              fields:
+                .markdown:
+                  type: markdown
+                  label: Block Content
