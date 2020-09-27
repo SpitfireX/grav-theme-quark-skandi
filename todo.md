@@ -2,10 +2,14 @@
 - [x] Mobile Navmenu
   - [x] Subitems darstellen
   - [x] Centering überprüfen (komische spans entfernen)
-- [x] Blog: Toggle für Bricklayer
+- [ ] Blog
+  - [x] Toggle für Bricklayer
+  - [ ] Design Pass über post cards
+    - [ ] runde ecken bei hero
+    - [ ] custom hero (html/markdown)
+    - [ ] tag bubbles falsche farbe
 - [ ] Sleipnir verändert Position wenn Scrollleiste auf Seite
 - [ ] bei manchen Bildschirmbreiten kollidieren Nav und Logo
-- [ ] Tags bei Blogposts haben die falsche Farbe
 - [ ] Hamburger gehört überarbeitet (ersetzt durch https://jonsuh.com/hamburgers/ ?)
 - [ ] Neue Templates für Mitgliederseite und Mitgliederprofile
 - [ ] Startseite mit mehreren Spalten
