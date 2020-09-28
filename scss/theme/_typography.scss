@@ -71,7 +71,7 @@ img {
 
 // Codeblocks
 pre code, pre.xdebug-var-dump{
-  background: #fafafa;
+  background: $gray-color-dark;
   display: block;
   padding: 1rem !important;
   line-height: 1.5;
@@ -90,7 +90,7 @@ pre[class*="language-"] {
 
 pre {
   code:not(.hljs):not([class*="language-"]) {
-    background: #f8f8f8;
+    background: $bg-color;
   }
 }
 
@@ -169,6 +169,7 @@ ol {
 
 // Notices
 .notices {
+  background: $bg-color !important;
   margin: 1.5rem 0;
   p {
     margin: 1rem 0;

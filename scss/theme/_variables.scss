@@ -9,11 +9,13 @@ $default-radius: 0.5rem !default;
 
 // Spectre Overrides
 $primary-color: $accent-color !default;
+$secondary-color: $body-color !default;
 $dark-color: $text-color-inv !default;
 $light-color: $text-color !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
 $border-color: lighten($body-color, 12%) !default;
+$border-radius: $default-radius !default;
 $bg-color: lighten($body-color, 8%) !default;
 $body-font-color: darken($light-color, 5%) !default;
 
