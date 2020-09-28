@@ -1,6 +1,7 @@
 #header {
   width: 100%;
   height: $header-height-large;
+  min-height: $header-height-small;
   border-bottom: $border-color solid 1px;
   @extend .default-animation;
 
