@@ -17,6 +17,9 @@ form:
               label: Sidebar Content Blocks
 
               fields:
+                .css_classes:
+                  type: text
+                  label: CSS Classes
                 .markdown:
                   type: markdown
                   label: Block Content

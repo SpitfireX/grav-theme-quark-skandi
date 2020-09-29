@@ -5,7 +5,7 @@
 {% for block in page.header.sidebar_content_blocks %}
     {% set counter = ( counter | default(0) ) + 1 %}
 
-    <div id="sidebar-content-block-{{ counter }}" class="sidebar-content">
+    <div id="sidebar-content-block-{{ counter }}" class="sidebar-content {{ block.css_classes }}">
         {{ block.markdown|markdown }}
     </div>
 {% endfor %}

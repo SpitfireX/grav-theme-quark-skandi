@@ -2,7 +2,7 @@
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
 {% if config.plugins.simplesearch.enabled %}
-<div class="sidebar-content">
+<div class="sidebar-content hide-md">
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
@@ -24,7 +24,7 @@
 {% for block in page.find('/modules/sidebar').header.sidebar_content_blocks %}
     {% set counter = ( counter | default(0) ) + 1 %}
 
-    <div id="sidebar-content-block-{{ counter }}" class="sidebar-content">
+    <div id="sidebar-content-block-{{ counter }}" class="sidebar-content {{ block.css_classes }}">
         {{ block.markdown|markdown }}
     </div>
 {% endfor %}
