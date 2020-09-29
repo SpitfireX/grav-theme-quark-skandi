@@ -132,11 +132,30 @@
 .overlay-menu {
   height: calc(100% - 90px);
   overflow-y: auto;
-  padding-bottom: 1rem;
   border-bottom: $border-color solid 1px;
 
   & > .tree {
     text-align: left;
+  }
+
+  .search-wrapper {
+
+    .search-input {
+      background: $gray-color-dark !important;
+      width: 100%;
+    }
+
+    .form-input::placeholder, .search-input::placeholder, [data-grav-field="array"] input::placeholder, [data-grav-field="array"] textarea::placeholder {
+      color: $light-color;
+    }
+  }
+
+  & > :first-child {
+    margin: 1rem;
+  }
+
+  & > *:not(:first-child) {
+    margin: 0 1rem 1rem 1rem;
   }
 }
 
@@ -153,7 +172,7 @@
     padding: 5px 0;
     line-height: 1.2rem;
 
-    background: rgba($gray-color-dark,0.1);
+    // background: rgba($gray-color-dark,0.1);
 
     a {
       color: $text-color;
@@ -177,7 +196,7 @@
     margin: 1rem 0 0 0;
     background: $gray-color-dark;
     border-radius: .5rem;
-    padding: 0px 1rem;
+    padding: 0
   }
 
   .toggler {

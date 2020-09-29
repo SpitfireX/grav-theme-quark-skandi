@@ -1,3 +1,7 @@
+.search-input {
+  background: $body-color !important;
+}
+
 .search-input, [data-grav-field="array"] input, [data-grav-field="array"] textarea {
   @extend .form-input;
 }
