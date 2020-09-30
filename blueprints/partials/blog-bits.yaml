@@ -68,8 +68,27 @@ form:
       toggleable: true
       label: Use Bricklayer.js for Post Layout
       highlight: 0
+      default: false
       options:
         1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+
+    header.show_readmore:
+      type: toggle
+      toggleable: true
+      label: Show Read More Link
+      help: "A link that is shown at the bottom of the page when there are more posts than Max Item Count specifies."
+      highlight: 0
+      default: false
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    header.readmore_link:
+      type: text
+      label: "Read More Link"
+      help: "The link for the \"Read More\" button"

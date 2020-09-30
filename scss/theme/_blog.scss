@@ -132,7 +132,12 @@ ul.pagination li {
 }
 
 .prev-next {
-  margin-top: 4rem;
+  margin-top: 1.6rem;
+
+  .btn {
+    background: $bg-color;
+    border-color: $bg-color;
+  }
 }
 
 /** Sidebar specific tweaks **/

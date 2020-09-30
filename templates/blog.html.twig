@@ -6,6 +6,10 @@
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 {% set use_bricklayer = header_var('use_bricklayer', [page, blog])|defined(true) %}
+{% set item_template = header_var('content', [page, blog]).item_template|defined('partials/blog-list-item.html.twig') %}
+{% set readmore_link = header_var('readmore_link') %}
+{% set readmore_text = header_var('readmore_text')|defined("Read More") %}
+{% set show_readmore = header_var('show_readmore')|defined(false) %}
 
 {% block stylesheets %}
     {% do assets.addCss('theme://css/bricklayer.css') %}
@@ -38,7 +42,7 @@
 
                 <div class="{{ (use_bricklayer) ? 'bricklayer' : 'blog-posts' }}">
                 {% for child in collection %}
-                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                    {% include item_template with {blog: page, page: child} %}
                 {% endfor %}
                 </div>
 
@@ -46,6 +50,14 @@
                     <div id="listing-footer">
                         {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
                     </div>
+                {% endif %}
+
+                {% if show_readmore and config.plugins.pagination.enabled and collection.params.pagination %}
+                    {% if readmore_link and (collection.params.pagination|length > 1) %}
+                        <div class="prev-next text-center">
+                            <a class="btn" href="{{ base_url ~ readmore_link|absolute_url }}">{{ "THEME_QUARK.BLOG.MORE_POSTS"|t }} <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    {% endif %}
                 {% endif %}
 
             {% endblock %}

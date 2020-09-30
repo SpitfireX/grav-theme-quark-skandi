@@ -87,6 +87,11 @@ form:
               validate:
                 type: bool
 
+            header.content.item_template:
+              type: text
+              label: Item Template
+              default: "partials/blog-list-item.html.twig"
+
           import@:
             type: partials/blog-bits
             context: blueprints://pages
