@@ -3,6 +3,9 @@ html {
 }
 
 #body-wrapper {
+  
+  min-height: 89vh;
+
   .container {
     padding: $vert-padding;
   }
