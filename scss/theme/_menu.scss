@@ -78,6 +78,7 @@ $navbar-hover-bg: $gray-color-dark;
       border-top: none;
       border-bottom-left-radius: $default-radius;
       border-bottom-right-radius: $default-radius;
+      min-width: 100%;
 
       ul {
         position: absolute;
