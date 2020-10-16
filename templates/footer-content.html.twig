@@ -1,0 +1,13 @@
+{% block content %}
+
+{{ content }}
+
+{% for block in page.header.footer_content_blocks %}
+    {% set counter = ( counter | default(0) ) + 1 %}
+
+    <div id="footer-content-block-{{ counter }}" class="footer-content {{ block.css_classes }}">
+        {{ block.markdown|markdown }}
+    </div>
+{% endfor %}
+
+{% endblock %}

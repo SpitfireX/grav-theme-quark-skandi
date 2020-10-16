@@ -1,7 +1,16 @@
 <section id="footer" class="section">
-    <section class="container {{ grid_size }}">
-        <p>
-            © {{ "now"|date('Y') }} FSI Skandinavistik.
-        </p>
+    <section class="footer-flex container {{ grid_size }}">
+        <div id="footer-content-block-1" class="footer-content">
+            <p>
+                © {{ "now"|date("Y") }} {{ config.site.author.name }}
+            </p>
+        </div>
+        {% for block in page.find("/modules/footer").header.footer_content_blocks %}
+            {% set counter = ( counter | default(1) ) + 1 %}
+
+            <div id="footer-content-block-{{ counter }}" class="footer-content {{ block.css_classes }}">
+                {{ block.markdown|markdown }}
+            </div>
+        {% endfor %}
     </section>
 </section>

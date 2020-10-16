@@ -1,0 +1,25 @@
+title: Footer Content Blocks
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        faq:
+          type: tab
+          title: Footer Content Blocks
+          fields:
+            header.footer_content_blocks:
+              name: footer_content_blocks
+              type: list
+              label: Footer Content Blocks
+
+              fields:
+                .css_classes:
+                  type: text
+                  label: CSS Classes
+                .markdown:
+                  type: markdown
+                  label: Block Content

@@ -16,4 +16,13 @@ body.sticky-footer {
   text-align: center;
   background-color: $body-color;
   border-top: $border-color solid 1px;
+
+  .footer-flex {
+    display: flex;
+    justify-content: center;
+
+    .footer-content:not(:last-child):not(:only-child) {
+      margin-right: 1rem;
+    }
+  } 
 }
