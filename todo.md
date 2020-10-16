@@ -7,11 +7,15 @@
   - [ ] Design Pass über post cards
     - [ ] runde ecken bei hero
     - [ ] custom hero (html/markdown)
-    - [ ] tag bubbles falsche farbe
+    - [x] tag bubbles falsche farbe
+  - [ ] Design Pass über Postseite
 - [ ] Sleipnir verändert Position wenn Scrollleiste auf Seite
 - [ ] bei manchen Bildschirmbreiten kollidieren Nav und Logo
 - [ ] Hamburger gehört überarbeitet (ersetzt durch https://jonsuh.com/hamburgers/ ?)
 - [ ] Neue Templates für Mitgliederseite und Mitgliederprofile
-- [ ] Startseite mit mehreren Spalten
-  - [ ] Neuigkeiten in der Mitte
-  - [ ] Sidebar mit mehreren Widgets/Bereichen
+- [x] Startseite mit mehreren Spalten
+  - [x] Neuigkeiten in der Mitte
+  - [x] Sidebar mit mehreren Widgets/Bereichen
+- [ ] Sidebar content blocks auf allen Seiten sichtbar machen (als Sidebar oder Footer)
+  - [ ] -> neues default template
+- [ ] Footer überarbeiten mit Impressum
