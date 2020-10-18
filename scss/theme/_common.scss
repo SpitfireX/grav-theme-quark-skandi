@@ -7,12 +7,26 @@ body {
 }
 
 #bottom-content-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
 
     .bottom-content-block {
-        flex-shrink: 1;
-        flex-basis: content;
+        // flex-shrink: 1;
+        // flex-basis: content;
+    }
+
+    // .bottom-content-block:not(:last-child):not(:only-child) {
+    //     margin-right: 0.8rem;
+    // }
+
+    .card {
+        background: $bg-color;
+        padding: 0.8rem 0.8rem;
+        border-color: $bg-color;
+
+        > * {
+            margin: 0;
+        }
     }
 }

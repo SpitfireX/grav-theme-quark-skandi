@@ -8,7 +8,7 @@
     {% for block in page.find('/modules/sidebar').header.sidebar_content_blocks %}
         {% set counter = ( counter | default(0) ) + 1 %}
 
-        <div id="bottom-content-block-{{ counter }}" class="bottom-content-block {{ block.css_classes }}">
+        <div id="bottom-content-block-{{ counter }}" class="column col-4 col-md-12 bottom-content-block card {{ block.css_classes }}">
             {{ block.markdown|markdown }}
         </div>
     {% endfor %}
