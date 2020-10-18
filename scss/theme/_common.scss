@@ -5,3 +5,14 @@ body {
     background-size: cover;
     background-image: url(../images/bg/sleipnir-outline.svg);
 }
+
+#bottom-content-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .bottom-content-block {
+        flex-shrink: 1;
+        flex-basis: content;
+    }
+}

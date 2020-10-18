@@ -88,7 +88,13 @@
             </section>
         {% endblock %}
         </section>
-
+        <section id="bottom-content">
+            <section id="bottom-content-wrapper" class="section">
+                <section id="bottom-content-container" class="bottom-content-container {{ grid_size }}">
+                    {{ block('bottom_content') }}
+                </section>
+            </section>
+        </section>
     </div>
 
     {% block footer %}
