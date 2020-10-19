@@ -1,10 +1,6 @@
-{% extends 'partials/base.html.twig' %}
+{% extends 'default.html.twig' %}
 
-{% block content %}
-
-{{ content }}
-
-
+{% block additional_content %}
     {% for faq in page.header.faq %}
         {% set counter = ( counter | default(0) ) + 1 %}
         <div class="accordion">
@@ -16,10 +12,10 @@
                 </h4>
             </label>
             <div class="accordion-body">
-                {{ faq.answer|markdown }}
+                <div class="accordion-content">
+                    {{ faq.answer|markdown }}
+                </div>
             </div>
         </div>
     {% endfor %}
-
-
 {% endblock %}

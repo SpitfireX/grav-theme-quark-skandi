@@ -4,6 +4,7 @@
     <div class="columns">
         <div class="column col-8 col-md-12 col-mx-auto">
             {{ page.content|raw }}
+            {{ block('additional_content') }}
         </div>
     </div>
 {% endblock %}
