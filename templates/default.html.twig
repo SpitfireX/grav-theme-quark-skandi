@@ -1,14 +1,18 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content|raw }}
+    <div class="columns">
+        <div class="column col-8 col-md-12 col-mx-auto">
+            {{ page.content|raw }}
+        </div>
+    </div>
 {% endblock %}
 
 {% block bottom_content %}
     {% for block in page.find('/modules/sidebar').header.sidebar_content_blocks %}
         {% set counter = ( counter | default(0) ) + 1 %}
 
-        <div class='column col-4 col-md-12 '>
+        <div class='column col-4 col-md-12'>
             <div id="bottom-content-block-{{ counter }}" class="bottom-content-block card {{ block.css_classes }}">
                 {{ block.markdown|markdown }}
             </div>

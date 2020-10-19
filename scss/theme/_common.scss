@@ -12,6 +12,8 @@ body {
     // flex-wrap: wrap;
 
     .bottom-content-block {
+        margin-bottom: 0.8rem;
+        
         :first-child {
             margin-top: 0;
         }
@@ -34,8 +36,4 @@ body {
         //     margin: 0;
         // }
     }
-}
-
-#bottom-content {
-    margin-bottom: 0.8rem;
 }
