@@ -57,6 +57,32 @@
                         <section id="navbar-langswitcher">
                             {% include 'partials/langswitcher-combobox.html.twig' %}
                         </section>
+
+                        <section class="navsearch">
+                            {% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
+
+                            <form class="navsearch-form" name="search" data-simplesearch-form>
+                                <input
+                                    name="searchfield"
+                                    class="search-input form-input navsearch-bar"
+                                    aria-label="search"
+                                    type="text"
+                                    {% if min_chars > 0 %} data-min="{{- min_chars -}}" {% endif %}
+                                    required
+                                    placeholder="{{"PLUGIN_SIMPLESEARCH.SEARCH_PLACEHOLDER"|t}}"
+                                    value="{{ query|e }}"
+                                    data-search-invalid="{{ "PLUGIN_SIMPLESEARCH.SEARCH_FIELD_MINIMUM_CHARACTERS"|t(min_chars)|raw }}"
+                                    data-search-separator="{{ config.system.param_sep }}"
+                                    data-search-input="{{ base_url }}{{ config.plugins.simplesearch.route == '@self' ? '' : (config.plugins.simplesearch.route == '/' ? '' : config.plugins.simplesearch.route) }}/query"
+                                />
+                            </form>
+                            <button class="btn navsearch-btn">
+                                <i class="fa fa-lg fa-search"></i>
+                            </button>
+
+                            {# {% include 'partials/simplesearch_searchbox.html.twig' %} #}
+                        </section>
+
                         {% if config.plugins.login.enabled and grav.user.username %}
                             <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
                         {% endif %}

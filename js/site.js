@@ -71,5 +71,28 @@ jQuery(document).ready(function($){
             }
             return false;
         });
-      });
+    });
+
+    // Navbar search bar
+    $('.navsearch-btn').click(function() {
+        var bar = $(".navsearch-bar");
+        
+        if (!bar.hasClass("active")) {
+            bar.addClass("active");
+            $(".navsearch").addClass("active");
+            $('.navsearch-btn').addClass("active");
+            bar.focus();
+        } else {
+            // $(".navsearch").removeClass("active");
+            // $('.navsearch-btn').removeClass("active");
+            // $('.navsearch-form').removeClass("active");
+            $(".navsearch").trigger("submit");
+        }
+    });
+
+    // $('.navsearch-form').submit(function() {
+    //     $(".navsearch").removeClass("active");
+    //     $('.navsearch-btn').removeClass("active");
+    //     $('.navsearch-form').removeClass("active");
+    // });
 });

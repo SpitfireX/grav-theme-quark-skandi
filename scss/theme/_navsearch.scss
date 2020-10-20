@@ -1,0 +1,46 @@
+.navsearch {
+    display: inline-flex;
+    border-radius: $border-radius;
+    margin-left: 2px;
+}
+
+.navsearch.active {
+    border: 1px solid $border-color;
+}
+
+.navsearch-bar {
+    width: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    border: none;
+    transition: width 0.25s;
+    color: $text-color;
+    padding: 0;
+    margin: 0;
+}
+
+.navsearch-bar.active {
+    width: 200px;
+    visibility: visible;
+    padding: 8px 5px;
+    // margin-left: 5px;
+    // margin-right: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.navsearch-btn:hover {
+    border-color: $accent-color !important
+}
+
+.navsearch-btn:active {
+    // background-color: $bg-color;
+}
+
+.navsearch-btn.active {
+    background-color: $body-color;
+    border-color: $body-color;
+    color: $accent-color;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

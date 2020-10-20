@@ -1,11 +1,11 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
-{% if config.plugins.simplesearch.enabled %}
+{# {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content hide-md">
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
-{% endif %}
+{% endif %} #}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
 <div class="sidebar-content">
     <h4>{{ 'THEME_QUARK.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h4>
